@@ -49,13 +49,15 @@ export default function RecentlyPlayed() {
   });
 
   return (
-    <div>
-      <h1>Recently Played</h1>
+    <div className="w-full p-4">
+      <h1 className="px-3">Recently Played</h1>
 
       {!query.data
         ? null
         : uniqBy(query.data as any[], keyFn).map((data) => (
-            <LiveTrack {...data} key={data.track.track.id} />
+            <div key={data.track.track.id} className="even:bg-gray-100">
+              <LiveTrack {...data} />
+            </div>
           ))}
     </div>
   );
