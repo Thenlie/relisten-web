@@ -68,7 +68,6 @@ type LiveTrackProps = {
   };
   isFirstRender: boolean;
   isLastSeen: boolean;
-  className: string;
 };
 
 // eslint-disable-next-line react/display-name
@@ -78,7 +77,6 @@ export default ({
   track,
   isFirstRender,
   isLastSeen,
-  className,
 }: LiveTrackProps) => {
   const [isMounted, setMounted] = useState(false);
 
@@ -89,7 +87,7 @@ export default ({
   if (!track?.track) return null;
 
   return (
-    <Link href={createURL(track)} prefetch={false} className={className}>
+    <Link href={createURL(track)} prefetch={false}>
       <Flex
         className={`w-full cursor-pointer border-b-[1px] border-[#eeeeee] px-3 transition-opacity duration-1000 ease-in-out ${
           isMounted || isFirstRender ? 'opacity-100' : 'opacity-0'
