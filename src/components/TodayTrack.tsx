@@ -15,7 +15,7 @@ export default ({ day }: { day: Day }) => {
 
   return (
     <Link href={createURL(day)} prefetch={false}>
-      <Flex className="w-full cursor-pointer border-b-2 border-b-[#eee] p-3">
+      <Flex className="w-full cursor-pointer border-b-2 border-b-[#eee] py-3">
         <div className="mr-3">
           <div className="font-semibold">{day.display_date}</div>
         </div>
