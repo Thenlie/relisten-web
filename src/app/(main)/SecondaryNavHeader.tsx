@@ -59,23 +59,23 @@ export default function SecondaryNavBar({ artistSlugsToName }: Props) {
 
   if (group === '(secondary)' && pageMetadata) {
     return (
-      <>
+      <div className="hidden lg:block">
         <span className="to">{pageMetadata.prefix}</span>
         <Link href={pathname}>{pageMetadata.title}</Link>
-      </>
+      </div>
     );
   }
 
   if (group === '(home)' && artistSlug) {
     const artistName = artistSlugsToName[artistSlug];
     return (
-      <>
-        <span>TO</span>
+      <div className="hidden lg:block">
+        <span>TO </span>
         <Link href={`/${artistSlug}`} className="uppercase">
           {bandsWithThe.includes(artistSlug) ? 'THE ' : ''}
           {artistName}
         </Link>
-      </>
+      </div>
     );
   }
 
