@@ -1,5 +1,5 @@
 const About = () => (
-  <div>
+  <div className="p-3">
     <h1>Welcome to Relisten</h1>
 
     <p>Peruse the various bands and enjoy their extensive live catalogues for free.</p>
